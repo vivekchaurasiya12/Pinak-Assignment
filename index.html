@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   <style>
+       #assignment {
+      background: linear-gradient(152deg, #090c52 55%, white 45%);
+      padding-top: 5rem;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-200">
+  <div id="assignment" class="w-auto p-10">
+    <h1 class="text-white text-3xl text-left font-semibold">OUR SERVICES</h1>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+      <!-- Card 1 -->
+      <div class="card relative mt-12 pt-14 bg-white rounded-lg shadow-md p-6">
+        <div class="absolute w-20 h-20 bg-gray-100 border-4 border-indigo-900 rounded-full flex items-center justify-center -top-10 left-1/2 transform -translate-x-1/2">
+          <img src="https://img.icons8.com/color/96/plumber.png" alt="Icon 1" class="w-3/5 h-3/5 object-contain">
+        </div>
+        <h2 class="text-lg sm:text-xl font-semibold text-center text-gray-800 mt-4">Emergency Plumbing Services</h2>
+        <p class="text-sm sm:text-base text-center text-gray-600 mt-2">
+          Our plumbers are ready 24/7 for emergencies, including nights, weekends, and holidays.
+        </p>
+        <button class="mt-4 text-indigo-600 font-semibold text-sm sm:text-base">
+          EXPLORE THIS SERVICE &gt;
+        </button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card relative mt-12 pt-14 bg-white rounded-lg shadow-md p-6">
+        <div class="absolute w-20 h-20 bg-gray-100 border-4 border-indigo-900 rounded-full flex items-center justify-center -top-10 left-1/2 transform -translate-x-1/2">
+          <img src="https://img.icons8.com/?size=96&id=13255&format=png" alt="Icon 2" class="w-3/5 h-3/5 object-contain">
+        </div>
+        <h2 class="text-lg sm:text-xl font-semibold text-center text-gray-800 mt-4">Plumbing and Drains</h2>
+        <p class="text-sm sm:text-base text-center text-gray-600 mt-2">
+          As the largest plumbing and drain service company, we make thousands of repairs every day.
+        </p>
+        <button class="mt-4 text-indigo-600 font-semibold text-sm sm:text-base">
+          EXPLORE THIS SERVICE &gt;
+        </button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card relative mt-12 pt-14 bg-white rounded-lg shadow-md p-6">
+        <div class="absolute w-20 h-20 bg-gray-100 border-4 border-indigo-900 rounded-full flex items-center justify-center -top-10 left-1/2 transform -translate-x-1/2">
+          <img src="https://img.icons8.com/?size=96&id=13101&format=png" alt="Icon 3" class="w-3/5 h-3/5 object-contain">
+        </div>
+        <h2 class="text-lg sm:text-xl font-semibold text-center text-gray-800 mt-4">Water Damage</h2>
+        <p class="text-sm sm:text-base text-center text-gray-600 mt-2">
+          Our teams are equipped with state-of-the-art water extraction and cleanup equipment.
+        </p>
+        <button class="mt-4 text-indigo-600 font-semibold text-sm sm:text-base">
+          EXPLORE THIS SERVICE &gt;
+        </button>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card relative mt-12 pt-14 bg-white rounded-lg shadow-md p-6">
+        <div class="absolute w-20 h-20 bg-gray-100 border-4 border-indigo-900 rounded-full flex items-center justify-center -top-10 left-1/2 transform -translate-x-1/2">
+          <img src="https://img.icons8.com/color/96/water-heater.png" alt="Icon 4" class="w-3/5 h-3/5 object-contain">
+        </div>
+        <h2 class="text-lg sm:text-xl font-semibold text-center text-gray-800 mt-4">Water Heaters</h2>
+        <p class="text-sm sm:text-base text-center text-gray-600 mt-2">
+          Trust Roto-Rooter for repair and replacement of gas, electric, and tankless water heaters.
+        </p>
+        <button class="mt-4 text-indigo-600 font-semibold text-sm sm:text-base">
+          EXPLORE THIS SERVICE &gt;
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // animation for cards using GSAP library
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        gsap.set(card, { rotationY: 0 });
+        gsap.to(card, {
+          rotationY: 360, 
+          duration: 2.2, 
+          ease: "CustomEase" 
+        });
+      });
+    });
+  </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+   
+</body>
+
+</html>
